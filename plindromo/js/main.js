@@ -1,13 +1,10 @@
-// Snack3
-// Fai inserire un numero, che chiameremo N, all'utente. Genera N array, ognuno formato da 10 numeri casuali da 1 a 100. Ogni volta che ne crei uno, stampalo.
-let N = parseInt(prompt("scrivi un numero:"));
+// Chiedere all'utente di inserire una parola
+// Creare una funzione per capire se la parola inserita è palindroma
+let parola = prompt("scrivi qualcosa:");
+console.log(parola);
 
-for (let i = 0; i < N; i++) {
-    let array = [];
-    for (let y = 0; y < 10; y++) {
-        array.push(Math.floor(Math.random()*100)+1);
-        
-    }
-    console.log("array:" + array);
-    
+function palindromo(x) {
+    return x.toLowerCase() === x.toLowerCase().split('').reverse().join('');
 }
+
+console.log(palindromo(parola))
